@@ -1,6 +1,15 @@
-# NodeMCU-MQTT-Example
+## Setup your NodeMCU
 
-TODO: More detailed example.
+1. Install the cp210x driver
+2. Install the ESP8266 driver for Arduino
+3. Load the sketch
+4. Install the required libraries (PubSubClient, ...)
+
+## Change the SSID/Password in the code
+
+It defaults to use Geeny's Guest network
+
+## Convert the Geeny Keys
 
 This is mostly based on:
 
@@ -12,3 +21,7 @@ openssl x509 -in geeny-ca.crt -sha1 -noout -fingerprint
 // Convert certificates to .der
 openssl x509 -outform der -in thing.crt -out thing-crt.der
 openssl rsa -outform der -in thing.key -out thing-key.der
+
+## TODO:
+
+Fingerprint check in the client
