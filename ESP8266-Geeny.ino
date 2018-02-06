@@ -11,6 +11,8 @@ const char* password = "geenyguest"; //replace this with your WiFi network passw
 const char* mqttServer = "mqtt.geeny.io";
 const char* topic = "human_message";
 
+const char* thingid = "cfb6287d-c5e1-47ad-b614-a02f769247a5";
+
 const int mqttPort = 8883;
 
 WiFiClientSecure espClient;
@@ -75,7 +77,7 @@ void setup()
   while (!client.connected()) {
     Serial.println("Connecting to MQTT...");
  
-    if (client.connect("3508f3a4-4902-4f69-96e8-2438eb901c84")) {
+    if (client.connect(thingid)) {
       Serial.println("connected");
       isConnected = true;
       
